@@ -1,0 +1,24 @@
+<div class = "container">
+  <h1 class = "text-center mt-3">Available Cars </h1>
+  <table class = "table table-bordered">
+    <thead>
+      <tr>
+        <th>Car Name</th>
+        <th>Vehcile NO.</th>
+        <th>Captain Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @cars.each do |car| %>
+          <td><%= car.car_name %></td>
+          <td><%= car.vehicle_no %></td>
+          <td><%= car.captain_name %></td>
+          <td><%= link_to "Book ride" , new_user_registration_path , class: 'btn btn-warning' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%== pagy_nav(@pagy) %>
+</div>

@@ -1,0 +1,29 @@
+<section class = "d-flex">
+  <%= render 'sidebar' %>
+  <section class = "admin-content">
+    <h1 class = "text-center mt-3 mb-3"> All Users</h1>
+    <table class = "table table-bordered">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th colspan="3">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.first_name %></td>
+            <td><%= user.last_name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.phone_number %></td>
+            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }  , class: "btn btn-outline-danger" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%== pagy_nav(@pagy) %>
+  </section>
+</section>

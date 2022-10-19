@@ -1,0 +1,35 @@
+// Place all the styles related to the user controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+/* Admin Side bar Style */
+
+.admin-content {
+  width: 70%;
+  margin-left: 20px;
+}
+
+.admin-sidebar {
+  background-color: #222d32;
+  ;
+  width: 15%;
+  height: 81vh;
+}
+
+.sidebar-heading {
+  color: white;
+}
+
+.admin-sidebar li {
+  padding: 5px 0px;
+}
+
+.admin-sidebar li:hover {
+  background: red;
+  border-radius: 9px;
+}
+
+.sidebar-link:hover {
+  text-decoration: none;
+}

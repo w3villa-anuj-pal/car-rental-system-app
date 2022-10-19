@@ -1,0 +1,60 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+/* header and container CSS */
+.custom-nav-dark {
+  background-color: black;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  font-weight: bold !important;
+}
+
+.welcome-header {
+  font-family: UberMove, UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+.jumbotron {
+  margin-top: 76px;
+  background-image: url('car-rentals.webp') !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px !important;
+  width: 600px !important;
+}
+
+.home-btn {
+  background-color: black !important;
+  color: white !important;
+  border-radius: .5rem !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+}
+
+.mt-120 {
+  margin-top: -150px !important;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.font-size {
+  font-size: 17px;
+}
+
+/* footer css */
+.footer-background {
+  background-color: black;
+}

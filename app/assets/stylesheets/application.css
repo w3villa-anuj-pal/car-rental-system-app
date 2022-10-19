@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ /* paination CSS */
+
+ .page {
+  margin-left: 7px;
+}
+
+.pagy-nav {
+  justify-content: center;
+  padding-bottom: 7px;
+}

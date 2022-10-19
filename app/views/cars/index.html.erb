@@ -1,0 +1,29 @@
+<section class = "d-flex">
+  <% if current_user.has_role? :admin %>
+    <%= render 'users/sidebar' %>
+  <% end %>
+  <section class = "admin-content">
+    <h1 class = "text-center mt-3">All Cars </h1>
+    <table class = "table table-bordered">
+      <thead>
+        <tr>
+          <th>Car Name</th>
+          <th>Vehcile NO.</th>
+          <th>Captain Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <% @cars.each do |car| %>
+            <td><%= car.car_name %></td>
+            <td><%= car.vehicle_no %></td>
+            <td><%= car.captain_name %></td>
+            <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' }  , class: "btn btn-outline-danger" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%== pagy_nav(@pagy) %>
+  </section>
+</section>
