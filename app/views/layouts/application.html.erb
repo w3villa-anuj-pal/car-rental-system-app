@@ -16,7 +16,7 @@
   <body>
     <%= render 'layouts/header'%>
     <div class = "container">
-      <% if !(("controller" == "devise/sessions" &&  "action" == "new") || ("controller" == "devise/registration" && "action" == "new"))   %>
+      <% if ((params[:controller] == "devise/sessions" &&  params[:action] == "new") && (params[:controller] == "devise/registration" && params[:action] == "new"))   %>
         <%= render 'layouts/error' %>
       <% end %>
     </div>

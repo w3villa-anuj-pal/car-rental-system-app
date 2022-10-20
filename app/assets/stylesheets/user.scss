@@ -21,7 +21,7 @@
   color: white;
 }
 
-.admin-sidebar li {
+.admin-sidebar li a {
   padding: 5px 0px;
 }
 
@@ -32,4 +32,10 @@
 
 .sidebar-link:hover {
   text-decoration: none;
+}
+
+.profile-pic-style {
+  height: 142px;
+  width: 142px;
+  border-radius: 2.2rem;
 }

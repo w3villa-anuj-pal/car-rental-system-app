@@ -14,13 +14,24 @@
  *= require_self
  */
 
- /* paination CSS */
+/* paination CSS */
 
- .page {
+.page {
   margin-left: 7px;
 }
 
 .pagy-nav {
   justify-content: center;
   padding-bottom: 7px;
+}
+
+.w-100-block {
+  display: block;
+  width: 100%;
+}
+
+/* Devise Error message */
+
+.alert-heading {
+  font-size: 1.5rem !important;
 }
