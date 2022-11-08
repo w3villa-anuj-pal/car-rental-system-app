@@ -20,7 +20,6 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to "View Profile" , user_path(current_user) ,class: "dropdown-item" %>
-            <%= link_to "Edit profile" , edit_user_registration_path , class: "dropdown-item" %>
             <%= link_to "Log out" ,destroy_user_session_path ,method: :delete, data: {confirm: "you want to logout"} ,class: "dropdown-item" %>
             <div class="dropdown-divider"></div>
             <% if user_signed_in? %>

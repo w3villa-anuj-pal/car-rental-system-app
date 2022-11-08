@@ -1,0 +1,23 @@
+<section class="location-page">
+  <%= render 'layouts/error' %>
+  <div class="top-heading">
+    <h1 class="top-title">
+      Book a City Taxi to your Destination in Town
+    </h1>
+    <p class="top-subtitle">Choose from a range of categories and prices</p>
+  </div>
+  <div class = "mt-5 location-main-div">
+    <div class="location-card">
+      <div class="tab-active font-weight-bold">CITY TAXI</div>
+      <hr>
+      <div class="category-header">Your everyday travel partner</div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter current location">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter the destination">
+      </div>
+      <%= link_to "Find Cars", cars_all_cars_path, class: " btn btn-block btn-dark home-btn"%>
+    </div>
+  </div>
+</section>

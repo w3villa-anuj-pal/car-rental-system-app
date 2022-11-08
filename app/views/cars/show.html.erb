@@ -1,0 +1,58 @@
+<div class = "container mt-3">
+  <div class = "d-flex justify-content-between payment-container ">
+    <div>
+      <h3 class = "car-h1"><%= @car.car_name %></h3>
+      <div class = "d-flex flex-row">
+        <span class = "middle-desc">
+          <small>Manual</small>
+          <small class = "ml-2"><%= @car.vehicle_type %></small>
+          <small class= "ml-2"><%= @car.seater %></small>
+        </span>
+      </div>
+      <div>
+        <span class="car-item-extras d-flex flex-row mt-3 mb-3">
+          <small class="car-item-message">
+            <%= image_tag "car-locaton.png", class: "car-icon-img"%></small>
+          <small class = "ml-2"><%= @car.vehicle_no %></small>
+        </span>
+      </div>
+    </div>
+    <div class="img"><%= image_tag (@car.image) , class: "car-img" %></div>
+  </div>
+  <hr>
+  <div class = "captain-info">
+    <h5>Captain Name-</h5>
+    <h3 class = "car-h1"><%= @car.captain_name %></h3>
+    <small><%= image_tag "star-image.png", class: "star-img"%></small>
+    <small class = " car-item-message">5.00 ·  7,594 kms driven </small>
+  </div>
+  <hr>
+  <div class = "policy">
+    <div class="card-section-container">
+      <div class ="car-h1">
+        Keep In Mind
+      </div>
+      <div>
+        <div class=" d-flex checkout-card-container">
+          <div><%= image_tag "car-locaton.png", class: "car-icon-img"%></div>
+          <div class="content-container">
+            <div class="content-text content-text">Driving License Mandatory</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class=" d-flex checkout-card-container">
+          <div><%= image_tag "cancellation.png", class: "car-icon-img"%></div>
+          <div class="content-container">
+            <div class="content-text content-text">Cancellation Policy</div>
+            <div class="content-sub-text">Hassle free cancellations and refunds at nominal charges</div>
+            <div><a href="#" class="card-hyperlink">See Details</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "text-center">
+    <%= button_to "Proceed to pay ₹230", checkout_create_path,class: "btn payment-btn btn-success", params: {id: @car.id}, remote: true %></td>
+</div>
+</div>

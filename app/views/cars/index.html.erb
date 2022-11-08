@@ -3,13 +3,17 @@
     <%= render 'users/sidebar' %>
   <% end %>
   <section class = "admin-content">
+    <%= render 'layouts/error' %>
     <h1 class = "text-center mt-3">All Cars </h1>
+    <td><%= link_to 'Add New Car', new_car_path, class: "btn btn-dark mb-3 add-car" %></td>
     <table class = "table table-bordered">
       <thead>
         <tr>
           <th>Car Name</th>
           <th>Vehcile NO.</th>
           <th>Captain Name</th>
+          <th>Seater</th>
+          <th>Vehicle Type</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -19,6 +23,9 @@
             <td><%= car.car_name %></td>
             <td><%= car.vehicle_no %></td>
             <td><%= car.captain_name %></td>
+            <td><%= car.seater %></td>
+            <td><%= car.vehicle_type %></td>
+            <td><%= link_to 'Edit', edit_car_path(car), class: "btn btn-outline-success" %></td>
             <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' }  , class: "btn btn-outline-danger" %></td>
           </tr>
         <% end %>

@@ -1,10 +1,45 @@
 <div class = "container mt-3">
+  <%= render 'layouts/error' %>
   <p class = "d-flex justify-content-center">
     <% if @user.image %>
       <%= image_tag @user.image_url , class: 'profile-pic-style' %>
+    <% else %>
+      <%= image_tag "default-profile-pic.png", class: 'profile-pic-style' %>
     <% end %>
   </p>
-  <h1 class = "text-center"><%= @user.first_name %> Profile </h1>
+  <h2 class = "text-center"><%= @user.first_name %> Profile </h2>
+  <div class = "text-center"><%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-dark home-btn"%></div>
+  <div class = "d-flex justify-content-between">
+    <h3 class = "car-h1">My rides</h3>
+    <div class = "text-center"><%= link_to "Download Profile", user_pdf_path(current_user), class: "btn btn-dark home-btn"%></div>
+  </div>
+  <hr>
+  <% @user.cars.each do |user| %>
+    <div class = " container mt-5">
+      <div class = "d-flex justify-content-between payment-container ">
+        <div>
+          <h3 class = "car-h1"><%= user.car_name %></h3>
+          <div class = "d-flex flex-row">
+            <span class = "middle-desc">
+              <small>Manual</small>
+              <small class = "ml-2"><%= user.vehicle_type %></small>
+              <small class= "ml-2"><%= user.seater %></small>
+            </span>
+          </div>
+          <div>
+            <span class="car-item-extras d-flex flex-row mt-3 mb-3">
+              <small class="car-item-message">
+                <%= image_tag "car-locaton.png", class: "car-icon-img"%></small>
+              <small class = "ml-2"><%= user.vehicle_no %></small>
+            </span>
+            <span><small><%= image_tag "star-image.png", class: "star-img"%></small>
+              <small class = " car-item-message">5.00 · <%= user.captain_name %></small>
+            </span>
+          </div>
+        </div>
+        <div class="img"><%= image_tag (user.image) , class: "car-img" %></div>
+      </div>
+    </div>
+  <% end%>
+  <hr>
 </div>
-<hr>
-<h3 class = "text-center">My rides</h3>

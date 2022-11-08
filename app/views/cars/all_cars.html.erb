@@ -1,24 +1,37 @@
-<div class = "container">
-  <h1 class = "text-center mt-3">Available Cars </h1>
-  <table class = "table table-bordered">
-    <thead>
-      <tr>
-        <th>Car Name</th>
-        <th>Vehcile NO.</th>
-        <th>Captain Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <% @cars.each do |car| %>
-          <td><%= car.car_name %></td>
-          <td><%= car.vehicle_no %></td>
-          <td><%= car.captain_name %></td>
-          <td><%= link_to "Book ride" , new_user_registration_path , class: 'btn btn-warning' %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <%== pagy_nav(@pagy) %>
-</div>
+<h1 class = "text-center mt-2">Available Car's </h1>
+<% @cars.each do |car| %>
+  <div class = "d-flex justify-content-center mb-4">
+    <div class="card custom-card">
+      <div class = "d-flex justify-content-between">
+        <div class="img"><%= image_tag (car.image) , class: "car-img" %></div>
+        <div class="info ml-2 mt-2">
+          <h3 class = "car-h1 mt-2"><%= car.car_name %></h3>
+          <div class = "d-flex flex-row">
+            <span class = "middle-desc">
+              <small>Manual</small>
+              <small class = "ml-2"><%= car.vehicle_type %></small>
+              <small class= "ml-2"><%= car.seater %></small>
+            </span>
+          </div>
+          <div class ="d-flex flex-row mt-2">
+            <span><small><%= image_tag "star-image.png", class: "star-img"%></small>
+              <small class = " car-item-message">5.00 · <%= car.captain_name %></small>
+            </div>
+            <span class="car-item-extras d-flex flex-row mt-3 mb-3">
+              <small class="car-item-message">
+                <%= image_tag "car-locaton.png", class: "car-icon-img"%></small>
+              <small class = "ml-2"><%= car.vehicle_no %></small>
+            </span>
+          </div>
+          <div class = "d-flex flex-column">
+            <div class = "price-bar mt-3 ml-230">₹230</div>
+            <div>
+              <%= link_to "Book Ride", car_path(id: car), class: "btn btn-outline-dark ml-230 book-ride"%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+<%== pagy_nav(@pagy) %>

@@ -21,6 +21,11 @@
               <div class="form-outline mb-4">
                 <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control form-control-lg' ,placeholder: "Enter Password" %>
               </div>
+              <h6 class ="login-h3">or</h6>
+              <h6 class="mb-3">Sign in with Phone Number</h6>
+              <div class="form-outline mb-4">
+                <%= f.text_field :phone_number, id: "phone", class: "form-control form-control-lg", placeholder: "Enter Phone no. with country code" %>
+              </div>
               <!-- Checkbox -->
               <div class="form-check d-flex justify-content-start mb-2">
                 <% if devise_mapping.rememberable? %>

@@ -9,13 +9,15 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= render 'devise/shared/error_messages' %>
         <h1 class = "text-center"><%= t('.Edit_Your_Profile', resource: resource_name.to_s.humanize) %></h1>
-        <p class = "d-flex justify-content-center">
+        <div class = "d-flex justify-content-center">
           <% if @user.image %>
             <%= image_tag @user.image_url , class: 'profile-pic-style' %>
+          <% else %>
+            <%= image_tag "default-profile-pic.png", class: 'profile-pic-style' %>
           <% end %>
-        </p>
-        <div class="field">
-          <%= f.label :image, "Upload profile pic" , class: "font-weight-bold" %><br>
+        </div>
+        <div class="field upload-profile-pic">
+          <%= f.label :image, "change profile photo", class: "upload-profile-pic-label"%>
           <%= f.file_field :image %>
         </div>
         <div class="row mt-3">

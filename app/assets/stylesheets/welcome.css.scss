@@ -36,10 +36,10 @@
 .home-btn {
   background-color: black !important;
   color: white !important;
-  border-radius: .5rem !important;
   font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 20px !important;
+  padding: 7px !important;
 }
 
 .mt-120 {
@@ -57,4 +57,49 @@
 /* footer css */
 .footer-background {
   background-color: black;
+}
+
+/* media query of welcome page */
+
+@media screen and (max-width: 786px) {
+  .welcome-header {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  .jumbotron {
+    margin-top: 50px;
+    height: 300px !important;
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .welcome-header {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .jumbotron {
+    height: 200px !important;
+    width: 300px !important;
+  }
+
+  .home-btn {
+    font-size: 14px !important;
+    line-height: 10px !important;
+  }
+}
+
+@media screen and (max-width: 325px) {
+
+  .welcome-header {
+    font-size: 15px;
+    line-height: 10px;
+  }
+
+  .home-btn {
+    font-size: 11px !important;
+    line-height: 5px !important;
+  }
 }

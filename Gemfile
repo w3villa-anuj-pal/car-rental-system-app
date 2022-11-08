@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 gem 'hirb'
+gem 'stripe'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7'
@@ -26,6 +27,9 @@ gem 'jbuilder', '~> 2.7'
   gem "rolify"
   gem 'pagy', '~> 5.10'
   gem 'activerecord-session_store'
+  gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
+  gem "omniauth-rails_csrf_protection"
+  gem 'omniauth-google-oauth2'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -35,6 +39,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'image_processing', '~> 1.2'
 gem 'shrine' , '~> 3.3'
 gem "shrine-cloudinary" , "~> 1.1"
+gem "prawn", "~> 2.4"
+gem 'twilio-ruby'
+gem 'simple_form'
 
 group :development, :test do
   # Use mysql as the database for Active Record

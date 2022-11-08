@@ -35,3 +35,283 @@
 .alert-heading {
   font-size: 1.5rem !important;
 }
+
+/* Available Cars */
+
+.car-img {
+  height: 100px;
+}
+
+.star-img {
+  width: 18px;
+}
+
+.car-icon-img {
+  width: 17px;
+}
+
+.car-h1 {
+  padding: 0;
+  margin: 0 0 4px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.16px;
+  line-height: 1.5;
+}
+
+.middle-desc {
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #a8a8a8;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.car-item-message {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  color: #1f1f1f;
+}
+
+.price-bar {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  line-height: 1.5;
+  padding-right: 120px;
+}
+
+.ml-230 {
+  margin-left: 200px;
+}
+
+.book-ride {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.ml-350 {
+  margin-left: 300px;
+}
+
+.add-car {
+  background-color: #222d32 !important;
+}
+
+.custom-card {
+  width: 720px;
+  border: 1px solid black !important;
+}
+
+/* Payement Car's style*/
+
+.payment-container {
+  width: 550px;
+}
+
+/* Payment policy style*/
+
+.icon {
+  width: 25px;
+}
+
+.content-container {
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+  padding-left: 14px;
+  margin-bottom: 20px;
+}
+
+.payment-btn {
+  width: 650px;
+  margin-bottom: 30px;
+}
+
+.cash-icon {
+  width: 40px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-profile-pic {
+  text-align: center;
+  color: blue;
+}
+
+.upload-profile-pic-label:hover {
+  cursor: pointer;
+}
+
+.ride-confirmed {
+  color: green;
+}
+
+.ride-confirmed-div {
+  height: 515px;
+
+}
+
+.ride-confirmed-div .info {
+  background-color: #a8a8a8;
+
+}
+
+/* Pyment successfull card style*/
+
+.success_main-div {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.success-h1 {
+  color: #88B04B;
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.success-p {
+  color: #3570ac;
+  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.checkmark {
+  color: #9ABC66;
+  font-size: 100px;
+  line-height: 200px;
+  margin-left: -15px;
+}
+
+.success-card {
+  text-align: center;
+  background: white;
+  padding: 45px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 4px #C8D0D8;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.upload-car-pic {
+  color: blue;
+}
+
+/* location page style */
+.location-page {
+  background-image: url('BookTaxi.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 32rem;
+
+}
+
+.location-main-div {
+  margin-left: 50px;
+}
+
+.location-card {
+  margin: 120px;
+  text-align: center;
+  background: white;
+  padding: 45px;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.top-heading {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  letter-spacing: 1px;
+
+}
+
+.top-title {
+  font-family: UberMove, UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
+}
+
+.top-subtitle {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.category-header {
+  font-family: UberMove, UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.tab-active {
+  background: #CDDC39;
+  border-radius: 25px;
+}
+
+
+
+/* media query of location page */
+
+@media screen and (max-width: 425px) {
+
+  .top-title {
+    font-size: 25px;
+  }
+
+  .location-main-div {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 356px) {
+
+  .top-title {
+    font-size: 25px;
+  }
+
+  .location-main-div {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
+
+/*login OR style*/
+.login-h3 {
+  position: relative;
+  font-size: 20px;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+}
+
+.login-h3:before,
+.login-h3:after {
+  position: absolute;
+  top: 51%;
+  overflow: hidden;
+  width: 50%;
+  height: 1px;
+  content: '\a0';
+  background-color: black;
+}
+
+.login-h3:before {
+  margin-left: -50%;
+  text-align: right;
+}
