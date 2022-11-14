@@ -4,9 +4,16 @@
 
 
 
-/* header and container CSS */
+/* header and container  */
+
+.welcome-main-section {
+  overflow: hidden;
+  margin-bottom: 53px;
+}
+
+
 .custom-nav-dark {
-  background-color: black;
+  background-color: black !important;
 }
 
 #logo {
@@ -18,28 +25,30 @@
 
 .welcome-header {
   font-family: UberMove, UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 52px;
+  font-size: 42px;
   font-weight: 700;
-  line-height: 64px;
+  line-height: 34px;
 }
 
-.jumbotron {
-  margin-top: 76px;
-  background-image: url('car-rentals.webp') !important;
+.welcome-image {
+  padding: 0px !important;
+  margin-top: 12.6%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px !important;
-  width: 600px !important;
+  height: 350px;
+  width: 550px;
+  margin-bottom: 11%;
+
 }
 
 .home-btn {
   background-color: black !important;
   color: white !important;
-  font-size: 16px !important;
+  font-size: 15px !important;
   font-weight: 500 !important;
-  line-height: 20px !important;
-  padding: 7px !important;
+  line-height: 24px !important;
+  padding: 13px !important;
 }
 
 .mt-120 {
@@ -54,52 +63,194 @@
   font-size: 17px;
 }
 
+
 /* footer css */
 .footer-background {
   background-color: black;
 }
 
+.footer-font-size {
+  font-size: 1.8rem;
+}
+
+
 /* media query of welcome page */
 
 @media screen and (max-width: 786px) {
   .welcome-header {
-    font-size: 32px;
-    line-height: 34px;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 700;
   }
 
-  .jumbotron {
+  .welcome-image {
     margin-top: 50px;
-    height: 300px !important;
-    width: 400px !important;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .welcome-header {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .jumbotron {
-    height: 200px !important;
-    width: 300px !important;
+    height: 300px;
+    width: 300px;
   }
 
   .home-btn {
-    font-size: 14px !important;
-    line-height: 10px !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
+    padding: 7px !important;
   }
 }
 
-@media screen and (max-width: 325px) {
-
+@media screen and (max-width: 768px) {
   .welcome-header {
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  .welcome-image {
+    height: 250px;
+    width: 300px;
+  }
+
+  .home-btn {
+    font-size: 15px !important;
+    line-height: 12px !important;
+    padding: 4px !important;
+  }
+
+  .location-page {
+    height: 86vh !important;
+  }
+
+  .payment-container {
+    width: 450px !important;
+  }
+
+  .payment-btn {
+    width: 450px !important;
+  }
+  .btn{
+    font-size: .7rem !important;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .ml-230 {
+    margin-left: 80px !important;
+  }
+
+  .car-img {
+    height: 70px !important;
+  }
+
+  .star-img {
+    width: 14px !important;
+  }
+
+  .car-icon-img {
+    width: 14px !important;
+  }
+
+  .car-h1 {
+    font-weight: bold;
     font-size: 15px;
-    line-height: 10px;
+    letter-spacing: 0.16px;
+    line-height: 1;
+  }
+
+  .success-card {
+    box-shadow: none !important;
+  }
+}
+
+@media screen and (max-width: 518px) {
+  .welcome-header {
+    font-size: 20px;
+  }
+
+  .welcome-image {
+    height: 200px;
+    width: 250px;
+  }
+
+  .ml-230 {
+    margin-left: 20px !important;
+  }
+
+  .car-h1 {
+    font-size: 14px !important;
+  }
+
+  .car-img {
+    height: 60px !important;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .welcome-header {
+    font-size: 18px;
+  }
+
+  .welcome-image {
+    height: 170px;
+    width: 220px;
   }
 
   .home-btn {
     font-size: 11px !important;
-    line-height: 5px !important;
+    line-height: 8px !important;
+    padding: 2px !important;
+  }
+
+  .price-bar {
+    font-size: 14px !important;
+    padding-right: 60px !important;
+  }
+
+  .payment-container {
+    width: 350px !important;
+  }
+
+  .payment-btn {
+    width: 250px !important;
+  }
+}
+
+@media screen and (max-width: 427px) {
+  .welcome-header {
+    font-size: 15px;
+  }
+
+  .welcome-image {
+    height: 170px;
+    width: 180px;
+  }
+
+  .home-btn {
+    font-size: 8px !important;
+    line-height: 6px !important;
+    padding: 1px !important;
+  }
+
+  .payment-container {
+    width: 300px !important;
+  }
+}
+
+@media screen and (max-width: 352px) {
+
+  .welcome-header {
+    font-size: 15px;
+    line-height: 5px;
+  }
+
+  .home-btn {
+    font-size: 19px !important;
+    line-height: 4px !important;
+  }
+
+  .book-ride {
+    margin-top: 20px;
+    margin-right: 5px;
+  }
+
+  .payment-container {
+    width: 300px !important;
   }
 }

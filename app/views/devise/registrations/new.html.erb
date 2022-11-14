@@ -2,7 +2,8 @@
   <div class="p-5 bg-image" style="
         background-image: url(/assets/car-rentals.webp);
         height: 250px;
-        background-position-y: 67%;">
+        background-position-y: 67%;
+        background-position: center;">
   </div>
   <div class = "container d-flex justify-content-center">
     <!-- Background image -->
@@ -37,6 +38,7 @@
           <%# phone input  %>
           <div class="form-outline mb-4">
             <%= f.phone_field :phone_number, autofocus: true, autocomplete: 'phone number', class: 'form-control' , placeholder: "Mobile Number"%>
+            <small class="form-text text-muted text-justify">phone number is optional</small>
           </div>
           <!-- Password input -->
           <div class="form-outline mb-4">
