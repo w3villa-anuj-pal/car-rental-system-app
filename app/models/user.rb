@@ -8,7 +8,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable, :lockable, :trackable,
          :omniauthable, omniauth_providers: [:github, :google_oauth2]
-  validates :phone_number,uniqueness: {case_sensitive: false}       
+  validates :phone_number,uniqueness: {case_sensitive: false}   
+  
+  #Make sure to send the devise email via async
+  def send_devise_notification(notification, *args)
+    devise_mailer.send(notification, self, *args).deliver_later
+  end 
          
   def self.from_omniauth(access_token)
     data = access_token.info

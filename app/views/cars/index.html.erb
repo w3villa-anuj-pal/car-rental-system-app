@@ -1,11 +1,11 @@
 <section class = "d-flex">
-  <% if current_user.has_role? :admin %>
-    <%= render 'users/sidebar' %>
-  <% end %>
+  <%= render 'users/sidebar' %>
   <section class = "admin-content">
     <%= render 'layouts/error' %>
-    <h1 class = "text-center mt-3">All Cars </h1>
-    <td><%= link_to 'Add New Car', new_car_path, class: "btn btn-dark mb-3 add-car" %></td>
+    <div class = "d-flex">
+      <%= link_to 'Add New Car', new_car_path, class: "btn btn-dark add-car mt-3 mb-3" %>
+      <h1 class = "justify-content-center mt-3 admin-cars-heading">All Cars </h1>
+    </div>
     <table class = "table table-bordered">
       <thead>
         <tr>
