@@ -13,7 +13,7 @@ Rails.application.configure do
     password:             Rails.application.credentials.dig(:google_smtp, :password),
     authentication:       'plain',
     enable_starttls_auto: true,
-    open_timeout:         5,
+    open_timeout:         5
     read_timeout:         5 }
 
   # Code is not reloaded between requests.

@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   post "checkout/create", to: "checkout#create"
   get 'users/pdf/:id' ,to: 'users#pdf' ,as: 'user_pdf'
   devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks",
-                                   sessions: 'users/sessions',}
+                                   sessions: 'users/sessions',
+                                   registrations: 'users/registrations',}
   resources :users
   resources :cars do
     member do
