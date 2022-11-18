@@ -42,6 +42,16 @@ body {
   font-size: 1.5rem !important;
 }
 
+.admin-sidebar {
+  background-color: #222d32;
+  width: 200px;
+  height: calc(100vh - 123px);
+}
+
+.admin-cars-heading{
+  margin-left: 270px;
+}
+
 /* Available Cars */
 
 .car-img {
@@ -119,6 +129,17 @@ body {
   font-weight: 500 !important;
   line-height: 24px !important;
   padding: 10px !important;
+}
+
+.show-car {
+  margin-bottom: 250px;
+}
+
+.No-Ride {
+  color: gray;
+  font-weight: revert-layer;
+  margin-bottom: 478px;
+
 }
 
 /* Payement Car's style*/

@@ -14,32 +14,39 @@
     <div class = "text-center"><%= link_to "Download Profile", user_pdf_path(current_user), class: "btn btn-dark custom-nav-dark"%></div>
   </div>
   <hr>
-  <% @user.cars.each do |user| %>
+  <% @user.cars.reverse.each do |car| %>
     <div class = " container mt-5">
       <div class = "d-flex justify-content-between payment-container ">
         <div>
-          <h3 class = "car-h1"><%= user.car_name %></h3>
+          <small class="mb-2">
+            <%= time_ago_in_words(CarUser.where(user_id: @user.id,car_id:car.id).first.created_at)%>
+          </small>
+          <h3 class = "car-h1"><%= car.car_name %></h3>
           <div class = "d-flex flex-row">
             <span class = "middle-desc">
               <small>Manual</small>
-              <small class = "ml-2"><%= user.vehicle_type %></small>
-              <small class= "ml-2"><%= user.seater %></small>
+              <small class = "ml-2"><%= car.vehicle_type %></small>
+              <small class= "ml-2"><%= car.seater %></small>
             </span>
           </div>
           <div>
             <span class="car-item-extras d-flex flex-row mt-3 mb-3">
               <small class="car-item-message">
                 <%= image_tag "car-locaton.png", class: "car-icon-img"%></small>
-              <small class = "ml-2"><%= user.vehicle_no %></small>
+              <small class = "ml-2"><%= car.vehicle_no %></small>
             </span>
             <span><small><%= image_tag "star-image.png", class: "star-img"%></small>
-              <small class = " car-item-message">5.00 · <%= user.captain_name %></small>
+              <small class = " car-item-message">5.00 · <%= car.captain_name %></small>
             </span>
           </div>
         </div>
-        <div class="img"><%= image_tag (user.image) , class: "car-img" %></div>
+        <div class="img"><%= image_tag (car.image), class: "car-img" %></div>
       </div>
     </div>
+    <hr>
   <% end%>
-  <hr>
-</div>
+  <% if @user.cars.length == 0 %>
+    <h1 class = "text-center No-Ride">No Ride
+      <h1>
+      <% end %>
+    </div>
