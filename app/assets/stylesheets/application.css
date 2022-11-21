@@ -48,6 +48,10 @@ body {
   height: calc(100vh - 123px);
 }
 
+.main-height{
+  height: calc(100vh - 123px)
+}
+
 .admin-cars-heading{
   margin-left: 270px;
 }

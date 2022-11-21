@@ -4,10 +4,10 @@
     <%= render 'layouts/error' %>
     <div class = "d-flex mt-3 justify-content-between">
       <div>
-        <h1 class = "text-center mt-3 mb-3"> All Users</h1>
+        <h1 class = "text-center mb-3"> All Users</h1>
       </div>
       <%= search_form_for @q do |f| %>
-        <div class = "d-flex mt-3 search-user">
+        <div class = "d-flex mt-2 search-user">
           <div class = "form-group">
             <%= f.text_field :first_name_cont, class: "form-control",placeholder: "search user by first name" %>
           </div>
