@@ -3,7 +3,9 @@ class CarsController < ApplicationController
   before_action :require_admin_user, only: [:index, :new, :edit, :destroy]
   
   def index
-    @pagy, @cars = pagy(Car.all, items: 5)
+    @q = Car.ransack(params[:q])
+    @pagy, @cars = pagy(@q.result)
+    # @pagy, @cars = pagy(Car.all, items: 5)
   end
 
   def show

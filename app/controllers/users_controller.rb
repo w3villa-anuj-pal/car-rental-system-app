@@ -3,7 +3,9 @@ class UsersController < ApplicationController
   before_action :require_admin_user, only: [:index, :destroy,:show]
 
   def index
-    @pagy, @users = pagy(User.all, items: 5)
+    @q = User.ransack(params[:q])
+    @pagy, @users = pagy(@q.result)
+    # @pagy, @users = pagy(User.all, items: 5)
   end
 
   def show

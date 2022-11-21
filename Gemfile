@@ -43,6 +43,7 @@ gem "shrine-cloudinary" , "~> 1.1"
 gem "prawn", "~> 2.4"
 gem 'twilio-ruby'
 gem 'simple_form'
+gem 'ransack'
 
 group :development, :test do
   # Use mysql as the database for Active Record
