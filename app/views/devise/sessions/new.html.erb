@@ -43,10 +43,26 @@
                 <%= f.submit 'Sign in', class: 'btn btn-primary btn-block btn-lg mb-2' %>
               </div>
             <% end %>
-            <%= render 'devise/shared/links' %>
+            <h6 class ="login-h3">or</h6>
+            <h6 class="mb-3">Sign in with</h6>
+            <div class = "d-flex justify-content-center mt-2">
+              <%= link_to user_github_omniauth_authorize_path, method: :post do %>
+                <%= image_tag("github.png", class: "sign-in-image mr-3 mb-2") %>
+              <% end %>
+              <%= link_to user_github_omniauth_authorize_path, method: :post do %>
+                <%= image_tag("google.png", class: "sign-in-image") %>
+              <% end %>
+            </div>
+            <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+              <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+            <% end %>
+            <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+              <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+            <% end %>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </section>

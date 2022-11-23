@@ -22,6 +22,10 @@ body {
   padding: 0;
 }
 
+.sign-in-image{
+  width: 40px;
+}
+
 .page {
   margin-left: 7px;
 }
